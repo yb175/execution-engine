@@ -1,0 +1,38 @@
+# Execution Engine
+
+## Purpose
+
+The purpose of this repository is to understand how coding platforms like HackerRank and LeetCode execute user-submitted code in isolated environments.
+
+The execution engine provides each student with an independent workspace for a given challenge and manages its lifecycle.
+
+## Core Operations
+
+### 1. Create Workspace
+- Creates a new, independent workspace for a given challenge.
+- Copies the challenge's source files into the workspace.
+- Each attempt gets its own workspace, ensuring changes do not affect the original challenge or other students' workspaces.
+
+### 2. Delete Workspace
+- Deletes an existing workspace.
+- Takes the workspace ID as input.
+
+### 3. Run Tests
+- Executes the challenge's test suite inside an isolated Docker container.
+- Mounts the student's workspace into the container, allowing tests to run against their modified code.
+- Captures standard output, standard error, exit code, execution duration, and timeout status.
+- Takes the workspace ID as input.
+
+### 4. Start Server
+- Starts the development server for a specific workspace inside a detached Docker container.
+- Allows students to run and interact with their applications independently.
+- Takes the workspace ID as input.
+
+### 5. Stop Server
+- Stops the development server associated with a workspace.
+- Cleans up its container and associated tracking information.
+- Takes the workspace ID as input.
+
+## Design Principle
+
+Each workspace is independent. Execution and development server processes operate inside containers rather than directly on the host machine.

@@ -1,0 +1,8 @@
+### GO FILE CONVENTIONS 
+```
+/cmd -> Application entrypoint 
+/internal -> Application specific code cannot be imported by modules apart from application 
+/handlers -> request handlers are defined here 
+/execution -> core buisness logics are written here 
+/workspace -> just simply create new workspace 
+```

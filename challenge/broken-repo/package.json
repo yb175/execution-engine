@@ -1,0 +1,20 @@
+{
+  "name": "broken-repo",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "test": "vitest run",
+    "start": "node server.js"
+  },
+  "devDependencies": {
+    "supertest": "^7.3.1",
+    "vitest": "^5.0.5"
+  },
+  "dependencies": {
+    "express": "^5.3.0"
+  }
+}
